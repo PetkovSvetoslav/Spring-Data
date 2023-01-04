@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="course.springdata.hibernateintro.entity.onlineshop.Stock" table="stocks">
+        <id name="id" type="long" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="code" type="string" column="stock_code" length="10" not-null="true" unique="true"/>
+        <property name="name" type="string" column="stock_name" length="20" not-null="true" unique="true"/>
+        <set name="categories" table="stock_category"
+             inverse="false" lazy="true" fetch="select" cascade="all">
+            <key column="stock_id" not-null="true"/>
+            <many-to-many entity-name="course.springdata.hibernateintro.entity.onlineshop.Category">
+                <column name="category_id" not-null="true"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
