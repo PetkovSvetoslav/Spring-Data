@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people>
+    <person>
+        <address>
+            <country>England</country>
+            <city>Liverpool</city>
+        </address>
+        <phone-numbers>
+            <phone number="0888 888 888"/>
+            <phone number="0111 222 333"/>
+        </phone-numbers>
+    </person>
+    <person>
+        <name>Peter</name>
+        <address>
+            <country>France</country>
+            <city>Paris</city>
+        </address>
+        <phone-numbers>
+            <phone number="0123 456 789"/>
+        </phone-numbers>
+    </person>
+    <person>
+        <name>Dimitar</name>
+        <address>
+            <country>England</country>
+            <city>Liverpool</city>
+        </address>
+        <phone-numbers/>
+    </person>
+</people>
